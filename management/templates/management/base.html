@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Management System</title>
+    <link rel="stylesheet" href="{% static 'management/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>IT Management System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+            <li><a href="{% url 'employee_dashboard' %}">Employee Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 IT Management System</p>
+    </footer>
+</body>
+</html>
